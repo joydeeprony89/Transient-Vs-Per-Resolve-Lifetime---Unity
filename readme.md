@@ -33,13 +33,20 @@ Helper TranCU = TestTransient before update
 
 Thread 2 , FSC CU = 2 after update
 
-Thread 2 , FSC TranCU = TestTransient after update \n
+Thread 2 , FSC TranCU = TestTransient after update
+
 Thread 2 , ESC CU = 2 after update
+
 Thread 2 , ESC TranCU = TestTransient after update
+
 Thread 1 , FSC CU = 1 after update
+
 Thread 1 , FSC TranCU = TestTransient after update
+
 Thread 1 , ESC CU = 1 after update
+
 Thread 1 , ESC TranCU = TestTransient after update
+
 
 
 
