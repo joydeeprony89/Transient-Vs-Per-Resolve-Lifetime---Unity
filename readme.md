@@ -1,45 +1,35 @@
-A Microsoft.Practices.Unity.LifetimeManager that holds onto the instance given to it. When the Microsoft.Practices.Unity.ContainerControlledLifetimeManager is disposed, the instance is disposed with it.
+TransientLifetimeManager
+Creates a new object of the requested type every time you call the Resolve or ResolveAll method.
 
-SynchronizedLifetimeManager abstract
-	^
-	|
-ContainerControlledLifetimeManager
-	^
-	|
-ExternallyControlledLifetimeManager
-A special lifetime manager which works like Microsoft.Practices.Unity.ContainerControlledLifetimeManager, except that in the presence of child containers, each child gets it's own instance of the object, instead of sharing one in the common parent.
 
+VS
 
 PerResolveLifetimeManager
-This is a custom lifetime manager that acts like Microsoft.Practices.Unity.TransientLifetimeManager, but also provides a signal to the default build plan, marking the type so that instances are reused across the build up object graph.
+This is a custom lifetime manager that acts like Microsoft.Practices.Unity.TransientLifetimeManager, but also provides a signal to the default build plan, 
+marking the type so that instances are reused across the build up object graph.
 
-PerThreadLifetimeManager
-A Microsoft.Practices.Unity.LifetimeManager that holds the instances given to it, keeping one instance per thread.
 
-MAIN THREAD
-Creating all on Thread 8
-Creating instance of ObjectForContainerControlled
-Creating instance of ObjectForTransient
-Creating instance of ObjectForExternallyControlled
-Creating instance of ObjectForPerResolve
-Creating instance of ObjectForPerThread
-Creating instance of ObjectForTransient
+O/P -
 
-Creating all on Thread 8
-Creating instance of ObjectForTransient
-Creating instance of ObjectForPerResolve
-Creating instance of ObjectForTransient
+Helper CU = test before update
+Helper CU = test before update
+Helper TranCU = TestTransient before update
+Thread 3 , FSC CU = 3 after update
+Thread 3 , FSC TranCU = TestTransient after update
+Thread 3 , ESC CU = 3 after update
+Thread 3 , ESC TranCU = TestTransient after update
+Helper CU = test before update
+Helper TranCU = TestTransient before update
+Helper TranCU = TestTransient before update
+Thread 2 , FSC CU = 2 after update
+Thread 2 , FSC TranCU = TestTransient after update
+Thread 2 , ESC CU = 2 after update
+Thread 2 , ESC TranCU = TestTransient after update
+Thread 1 , FSC CU = 1 after update
+Thread 1 , FSC TranCU = TestTransient after update
+Thread 1 , ESC CU = 1 after update
+Thread 1 , ESC TranCU = TestTransient after update
 
-TASK RUN
-Creating all on Thread 10
-Creating instance of ObjectForTransient
-Creating instance of ObjectForPerResolve
-Creating instance of ObjectForPerThread
-Creating instance of ObjectForTransient
 
-Creating all on Thread 9
-Creating instance of ObjectForTransient
-Creating instance of ObjectForPerResolve
-Creating instance of ObjectForPerThread
-Creating instance of ObjectForTransient
+
 
