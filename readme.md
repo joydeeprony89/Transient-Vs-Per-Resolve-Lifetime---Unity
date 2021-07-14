@@ -22,12 +22,18 @@ Thread 3 , FSC CU = 3 after update
 Thread 3 , FSC TranCU = TestTransient after update
 
 Thread 3 , ESC CU = 3 after update
+
 Thread 3 , ESC TranCU = TestTransient after update
+
 Helper CU = test before update
+
 Helper TranCU = TestTransient before update
+
 Helper TranCU = TestTransient before update
+
 Thread 2 , FSC CU = 2 after update
-Thread 2 , FSC TranCU = TestTransient after update
+
+Thread 2 , FSC TranCU = TestTransient after update \n
 Thread 2 , ESC CU = 2 after update
 Thread 2 , ESC TranCU = TestTransient after update
 Thread 1 , FSC CU = 1 after update
